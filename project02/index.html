@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Search App</title>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: white;
+        font-family: Arial, sans-serif !important;
+      }
+
+      nav.navbar {
+        background-color: black;
+      }
+
+      nav.navbar .navbar-brand {
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      main {
+        min-height: 75vh;
+        padding: 30px 0;
+      }
+
+      #searchInput {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+
+      #searchButton {
+        padding: 10px 20px;
+        background-color: blue;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #searchButton:hover {
+        background-color: blue;
+      }
+
+      .card {
+        border: 1px solid white;
+        border-radius: 10px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+      }
+
+      .card-body {
+        padding: 15px;
+      }
+
+      .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #343a40;
+      }
+
+      .card-text {
+        color: yellow;
+      }
+
+      .spinner-border {
+        display: block;
+        margin: 20px auto;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+        padding: 20px 0;
+      }
+
+      footer ul li a {
+        color: grey;
+      }
+
+      footer ul li a:hover {
+        color: white;
+      }
+
+      .dynamic_data {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a class="navbar-brand" href="#">Anime Search</a>
+        </div>
+      </nav>
+
+      <section class="text-center my-5">
+        <h2>Search your favorite Anime here... ✨</h2>
+      </section>
+    </header>
+
+    <main class="container text-center">
+      <div class="input-group justify-content-center mb-5">
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control"
+          placeholder="Search for anime"
+        />
+        <button id="searchButton" class="btn btn-primary">Search</button>
+      </div>
+
+      <div class="spinner-border text-primary d-none" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+
+      <section class="result">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 dynamic_data"></div>
+      </section>
+    </main>
+
+    <footer class="text-center">
+      <ul class="nav justify-content-center pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Features</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About</a>
+        </li>
+      </ul>
+      <p>© 2024 Anime Search, Inc</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"
+    ></script>
+
+    <script type="module" src="/main.js"></script>
+</body>
